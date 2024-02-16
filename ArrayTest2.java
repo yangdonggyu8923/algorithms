@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ArrayTestTwo {
+public class ArrayTest2 {
     /**
      * 최적화 문제 중 최대값 구하기
      * */
