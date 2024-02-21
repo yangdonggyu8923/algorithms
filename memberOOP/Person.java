@@ -1,5 +1,7 @@
 package memberOOP;
 
+import java.util.Scanner;
+
 public class Person {
     private String id;
     private String password;
@@ -9,6 +11,27 @@ public class Person {
     private int phoneNumber;
     private String address;
     private String job;
+    private double height;
+    private double weight;
+
+    // 카우프 지수에서 사용하는 생성자
+    public Person(double height, double weight){
+        this.height = height;
+        this.weight = weight;
+    }
+
+    // 회원가입에서 사용하는 생성자
+    public Person(String id, String password, String checkPassword, String name, int residentRegistrationNumber,
+                  int phoneNumber, String address, String job) {
+        this.id = id;
+        this.password = password;
+        this.checkPassword = checkPassword;
+        setName(name);
+        setResidentRegistrationNumber(residentRegistrationNumber);
+        setPhoneNumber(phoneNumber);
+        setAddress(address);
+        setJob(job);
+    }
 
     public void setId(String id) {
         this.id = id;
@@ -72,5 +95,35 @@ public class Person {
 
     public String getJob() {
         return job;
+    }
+
+    public void setHeight() {
+        this.height = height;
+    }
+
+    public double getHeight() {
+        return this.height;
+    }
+
+    public void setWeight() {
+        this.weight = weight;
+    }
+
+    public double getWeight() {
+        return this.weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id='" + id + '\'' +
+                ", password='" + password + '\'' +
+                ", checkPassword='" + checkPassword + '\'' +
+                ", name='" + name + '\'' +
+                ", residentRegistrationNumber=" + residentRegistrationNumber +
+                ", phoneNumber=" + phoneNumber +
+                ", address='" + address + '\'' +
+                ", job='" + job + '\'' +
+                '}';
     }
 }
