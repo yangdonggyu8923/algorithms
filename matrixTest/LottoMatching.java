@@ -18,7 +18,7 @@ public class LottoMatching {
         // 내 로또 번호 출력
         System.out.println("내 번호");
         printLotto(lotto);
-        
+
         int[] winLotto = new int[6];
         winLotto = createArrayWithoutDuplicate(winLotto);
         winLotto = sortAscending(winLotto);
@@ -39,19 +39,19 @@ public class LottoMatching {
         System.out.println();
         switch (num){
             case 6:
-            System.out.println("1등");
+                System.out.println("1등");
                 break;
             case 5:
-            System.out.println("2등");
+                System.out.println("2등");
                 break;
             case 4:
-            System.out.println("3등");
+                System.out.println("3등");
                 break;
             case 3:
-            System.out.println("4등");
+                System.out.println("4등");
                 break;
             case 2,1,0:
-            System.out.println("꽝");
+                System.out.println("꽝");
                 break;
         }
 

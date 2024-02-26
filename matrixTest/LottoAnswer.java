@@ -26,13 +26,13 @@ public class LottoAnswer {
         printLotto(arr);
     }
 
-    private static void printLotto(int[] arr) {
+    public static void printLotto(int[] arr) {
         for(int i =0; i< arr.length; i++){
             System.out.printf("%d \t", arr[i]);
         }
     }
 
-    private static int[] sortAscending(int[] arr) {
+    public static int[] sortAscending(int[] arr) {
         // 버블 정렬이 들어갈 부분
         for(int i=0; i< arr.length;i++){
             for(int j=0; j < arr.length -1; j++){
@@ -46,7 +46,7 @@ public class LottoAnswer {
         return arr;
     }
 
-    private static int[] createArrayWithoutDuplicates(int[] arr) {
+    public static int[] createArrayWithoutDuplicates(int[] arr) {
         for(int i=0; i<6; i++){
             int randomNumber = createRandomNumber(1,45);
             boolean check = false;
@@ -66,7 +66,7 @@ public class LottoAnswer {
         return arr;
     }
 
-    private static int createRandomNumber(int start, int end) {
+    public static int createRandomNumber(int start, int end) {
         Random random = new Random();
         return random.nextInt(end)+start;
     }
