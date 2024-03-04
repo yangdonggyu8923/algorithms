@@ -9,7 +9,7 @@ import java.util.Scanner;
 // 벌 벌 벌통
 // 벌통 벌 벌
 // 벌 벌통 벌
-public class Honey {
+public class Honey21758 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

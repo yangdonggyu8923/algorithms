@@ -12,7 +12,7 @@ import java.util.Scanner;
  * 회의의 시작시간과 끝나는 시간이 같을 수도 있다.
  * 이 경우에는 시작하자마자 끝나는 것으로 생각하면 된다.
  */
-public class MeetingRoom {
+public class MeetingRoom1931 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

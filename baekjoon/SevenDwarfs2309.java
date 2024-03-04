@@ -3,7 +3,7 @@ package baekjoon;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SevenDwarf {
+public class SevenDwarfs2309 {
     //입력 20,7,23,19,10,15,25,8,13
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
