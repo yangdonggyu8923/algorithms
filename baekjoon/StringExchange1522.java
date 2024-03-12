@@ -18,23 +18,33 @@ public class StringExchange1522 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
-        int len = str.length();
         int aCount = 0;
-        for(int i=0; i< len; i++){
+        for(int i=0; i< str.length(); i++){
             if(str.charAt(i)=='a'){
                 aCount += 1;
             }
         }
-        int min = len;
+        int start = 0;
+        int end = aCount -1;
         int bCount = 0;
-        for(int i=0; i<len;i++){
-            for(int j=i; j<aCount+i; j++){
-                if(str.charAt(j%str.length())=='b'){
+        for(int i=0; i<aCount;i++){
+                if(str.charAt(i)=='b'){
                     bCount += 1;
                 }
+            }
+
+        int min = bCount;
+        while(start < str.length()){
+            if(str.charAt(++end % str.length()) == 'b') {
+                bCount += 1;
+            }
+            if(str.charAt(start++) == 'b') {
+                bCount -= 1;
             }
             min = Math.min(min, bCount);
         }
         System.out.println(min);
     }
+
 }
+
