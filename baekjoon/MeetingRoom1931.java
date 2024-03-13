@@ -16,7 +16,6 @@ package baekjoon;
 끝나는 시간과 동시에 회의가 시작가능하다.
  */
 
-
 import java.util.Comparator;
 import java.util.Arrays;
 import java.util.Scanner;
