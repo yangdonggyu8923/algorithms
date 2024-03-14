@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.test;
 
 public class Password4659 {
     // https://www.acmicpc.net/problem/4659

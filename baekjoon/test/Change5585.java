@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.test;
 
 import java.util.Scanner;
     //타로는 자주 JOI잡화점에서 물건을 산다.

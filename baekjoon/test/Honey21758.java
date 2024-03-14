@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.test;
 
 import java.util.Scanner;
 // 최대의 꿀의 양을 출력

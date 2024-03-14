@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.test;
 
 public class BulbSwitch2138 {
     //N개의 스위치와 N개의 전구가 있다.
