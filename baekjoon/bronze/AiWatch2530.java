@@ -12,15 +12,17 @@ import java.util.Scanner;
 public class AiWatch2530 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int si = sc.nextInt() * 60 * 60;
-        int bun = sc.nextInt() * 60;
+        int si = sc.nextInt();
+        int bun = sc.nextInt();
         int cho = sc.nextInt();
         int ncho = sc.nextInt();
 
-        int total = si + bun + cho + ncho;
-        int total2 = total/3600;
-        int total3 = total2/60;
-        System.out.printf(String.valueOf(total2));
-        System.out.printf(String.valueOf(total3));
+        cho = cho + ncho;
+        bun = bun + cho/60;
+        cho = cho%60;
+        si = si + bun/60;
+        bun = bun%60;
+        si = si%24;
+        System.out.println(si + " " + bun + " " + cho);
     }
 }
