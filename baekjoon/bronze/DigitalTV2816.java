@@ -1,4 +1,7 @@
 package baekjoon.bronze;
+
+import java.util.Scanner;
+
 //2012년 12월 31일 새벽 4시부터 지상파 아날로그 TV방송이 종료되었다.
 // TV를 자주보는 할머니를 위해서, 상근이네 집도 디지털 수신기를 구입했다.
 //
@@ -27,6 +30,54 @@ package baekjoon.bronze;
 // 방법의 길이는 500보다 작아야 한다. 두 채널을 제외한 나머지 채널의 순서는 상관없다.
 public class DigitalTV2816 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String[] arr = new String[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.next();
+        }
 
+        // KBS1을 첫 번째 채널로 만들기
+        for (int i = 0; i < n; i++) {
+            // KBS1을 찾았다면 해당 i인덱스만큼 채널 끌어 올리기
+            if (arr[i].equals("KBS1")) {
+                String temp = "";
+                for (int j = i; j > 0; j--) {
+                    System.out.print(4);
+                    temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                }
+                break;
+            }
+            // KBS1 찾기 전까지 화살표 내리기
+            else
+                System.out.print(1);
+        }
+
+        // KBS1을 첫 번째로 옮기고 난 후 두 번째 채널이 KBS2라면 종료
+        if (arr[1].equals("KBS2"))
+            System.exit(0);
+
+        // KBS2을 두 번째 채널로 만들기
+        for (int i = 0; i < n; i++) {
+            /*
+             * KBS2을 찾았다면 해당 i인덱스만큼 채널 끌어 올리기
+             * 이때 첫 번째 채널은 KBS1인것 주의
+             */
+            if (arr[i].equals("KBS2")) {
+                String temp = "";
+                for (int j = i; j > 1; j--) {
+                    System.out.print(4);
+                    temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                }
+                break;
+            }
+            // KBS2 찾기 전까지 화살표 내리기
+            else
+                System.out.print(1);
+        }
     }
 }
