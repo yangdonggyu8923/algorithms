@@ -1,8 +1,8 @@
-package baekjoon.aPlusB;
+package baekjoon.operation;
 
 import java.util.Scanner;
 
-public class APlusB10953 {
+public class Sum10953 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
